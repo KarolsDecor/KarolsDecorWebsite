@@ -1,0 +1,580 @@
+/* Reset some default styling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* For body text */
+    color: #03045e; /* Dark blue */
+    line-height: 1.6;
+    background-color: #caf0f8; /* Very light blue for body background */
+}
+
+/* Header Styling */
+header {
+    background-color: #03045e; /* Dark blue */
+    color: #ffffff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo img {
+    max-height: 100px; /* Doubled height for larger logo */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    margin-left: 1.5rem;
+}
+
+header ul li a {
+    font-family: 'Montserrat', sans-serif; /* Modern font for menu */
+    text-transform: uppercase; /* Capital letters for sleek look */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #90e0ef; /* Light blue on hover */
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    background: url("../images/backgrounds/HeroBackground.jpg") center/cover no-repeat;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    height: 90vh; /* Slightly reduced height for better visibility */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Position closer to the top */
+    align-items: center; /* Center horizontally */
+    padding: 2rem 1rem 0; /* Adjust padding to move text higher */
+    position: relative;
+    text-align: center; /* Center text alignment */
+}
+
+.hero-content {
+    margin-top: 6rem; /* Adjust to position text correctly */
+    justify-content: flex-start; /* Position closer to the top */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text alignment */
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif; /* Modern font for sleek appearance */
+    font-size: 3rem; /* Ensure heading is prominent */
+    font-weight: 600; /* Bold weight */
+    text-transform: uppercase; /* Match logo style */
+    margin-bottom: 1rem; /* Space between heading and body */
+    white-space: nowrap; /* Prevent heading from breaking into multiple lines */
+}
+
+.hero p {
+    font-family: 'Poppins', sans-serif; /* Clean body font */
+    font-size: 1.5rem;
+    margin-bottom: 2rem; /* Space below the paragraph */
+    line-height: 2;
+}
+
+
+/* Bark Profile Button */
+.bark-profile {
+    text-align: center; /* Center the button */
+    margin-bottom: 20px; /* Add spacing between the button and contact info */
+}
+
+.bark-link {
+    background-color: #00B4D8; /* Match header and footer color */
+    color: white; /* White text for contrast */
+    display: inline-flex; /* Behave like a button */
+    padding: 15px 30px; /* Add padding */
+    align-items: center;
+    font-size: 1.5em; /* Larger text size */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    animation: pulse 1.5s infinite;
+}
+
+.bark-link img {
+    height: 24px;
+    margin-right: 10px;
+}
+
+.bark-link:hover {
+    background-color: #0077b6; /* Lighter blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Bark Link Icon */
+.bark-link i {
+    margin-right: 10px; /* Space between the icon and text */
+    font-size: 1.2em; /* Adjust icon size */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* About Section */
+.about {
+    padding: 4rem 1rem;
+    background-color: #caf0f8; /* Very light blue background */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.about-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left; /* Left-align text */
+}
+
+.about-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    color: #0077b6;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase; /* Matches branding style */
+}
+
+.about-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #03045e; /* Darker text for readability */
+}
+
+.about-text strong {
+    color: #0077b6; /* Highlight important terms with brand color */
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: #90e0ef; /* Light blue background */
+}
+
+.services h2 {
+    font-family: 'Montserrat', sans-serif; /* Modern font */
+    font-size: 2.5rem; /* Larger heading */
+    color: #0077b6; /* Medium blue */
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-transform: uppercase; /* Capitalize heading */
+}
+
+.service-cards {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 1.5rem; /* Spacing between items */
+    max-width: 800px; /* Limit width for alignment */
+    margin: 0 auto; /* Center the grid */
+}
+
+@media (max-width: 900px) {
+    .service-cards {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+}
+
+.service-card {
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 8px; /* Slightly rounded corners */
+    padding: 1.5rem;
+    max-width: 400px; /* Ensure consistent size */
+    text-align: left; /* Align text to the left */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.service-card h3 {
+    font-family: 'Montserrat', sans-serif; /* Modern font for titles */
+    font-size: 1.5rem;
+    color: #00b4d8; /* Turquoise */
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-family: 'Poppins', sans-serif; /* Clean body font */
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #03045e; /* Dark text for readability */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+}
+
+/* Additional Notes Styling */
+.additional-notes {
+    background-color: #f9f9f9; /* Light background */
+    border-left: 5px solid #0077b6; /* Blue border for emphasis */
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 1.1em; /* Readable font size */
+    line-height: 1.6; /* Space between lines */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    text-align: left; /* Ensure all text is left-aligned */
+}
+
+/* Title Styling */
+.additional-notes h3 {
+    margin-top: 0; /* Remove extra margin at the top */
+    font-size: 1.5em; /* Match heading size */
+    font-family: 'Your-Heading-Font', sans-serif; /* Ensure it uses the same font as other headings */
+    color: #03045e; /* Matches the theme color */
+    text-transform: uppercase; /* All caps */
+    text-align: center;
+}
+
+/* Bullet Points Styling */
+.additional-notes ul {
+    list-style-type:disc; /* Use bullet points */
+    margin: 20px 0 0 20px; /* Add left margin for bullets */
+    padding: 0; /* Remove padding */
+}
+
+.additional-notes li {
+    margin-bottom: 10px; /* Space between items */
+    color: #333; /* Neutral text color */
+    text-align: left; /* Ensure all text is left-aligned */
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#gallery h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Gallery Swiper Container */
+.gallery-swiper {
+    width: 100%; /* Ensure the gallery fits within the page */
+    max-width: 1200px; /* Restrict the maximum width */
+    margin: 0 auto; /* Center the gallery */
+    padding: 20px 0; /* Add vertical spacing around the gallery */
+    overflow: hidden; /* Prevent horizontal scrollbar */
+    position: relative; /* Contain navigation arrows within the gallery */
+}
+
+/* Swiper Wrapper */
+.swiper-wrapper {
+    display: flex;
+    gap: 10px; /* Reduce spacing between slides */
+}
+
+/* Swiper Slide */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Swiper Slide Images */
+.swiper-slide img {
+    max-width: 100%; /* Ensure images fit within their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.swiper-slide img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Navigation Arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    color: white; /* White arrow icons */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    border-radius: 50%; /* Circular arrow buttons */
+    padding: 10px; /* Adjust button size */
+    width: 40px;
+    height: 40px;
+    position: absolute; /* Place arrows relative to the gallery */
+    top: 50%; /* Center arrows vertically */
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure arrows appear above images */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Position the left arrow closer to the edge */
+}
+
+.swiper-button-next {
+    right: 10px; /* Position the right arrow closer to the edge */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* Pagination Dots */
+.swiper-pagination {
+    bottom: 10px; /* Adjust vertical position of pagination dots */
+}
+
+.swiper-pagination-bullet {
+    background-color: #0077b6; /* Light blue dots */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px; /* Add spacing between dots */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #00b4d8; /* Brighter blue for active dot */
+}
+
+/* Ensure the gallery images scale on smaller screens */
+@media (max-width: 768px) {
+    .swiper-slide img {
+        max-width: 150px; /* Further reduce size for smaller devices */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center images */
+    }
+    .gallery-swiper {
+        padding: 10px 0; /* Adjust vertical spacing for smaller devices */
+    }
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    color: #03045e; /* Dark blue */
+    margin-bottom: 20px;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    max-width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0077b6; /* Light blue */
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 50px 20px; /* Add padding around the contact section */
+    background-color: #f9f9f9; /* Light gray background */
+    text-align: center; /* Center-align the text */
+}
+
+/* Contact Section Title */
+#contact h2 {
+    font-size: 2.5em; /* Large font size for the title */
+    margin-bottom: 20px; /* Spacing below the title */
+    color: #03045e; /* Dark blue color to match the theme */
+    text-transform: uppercase; /* Make the title uppercase */
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 50px 20px; /* Spacing around the section */
+    background-color: #CAF0F8; /* Light background */
+    text-align: center; /* Center-align the section */
+}
+
+#contact h2 {
+    font-size: 2em; /* Large title font */
+    margin-bottom: 10px; /* Space below the title */
+    color: #03045e; /* Dark blue for title */
+    text-transform: uppercase; /* All caps */
+}
+
+#contact p {
+    font-size: 1.5em; /* Slightly larger font for the paragraph */
+    color: #333; /* Neutral text color */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.contact-info {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0 auto; /* Center the list */
+    max-width: 600px; /* Restrict width for alignment */
+    text-align: left; /* Align list items to the left */
+}
+
+.contact-info li {
+    margin-bottom: 15px; /* Space between list items */
+    font-size: 1.1em; /* Font size for contact info */
+    color: #333; /* Neutral text color */
+}
+
+.contact-info a {
+    color: #0077b6; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold links for emphasis */
+}
+
+.contact-info a:hover {
+    color: #00b4d8; /* Lighter blue on hover */
+}
+
+
+
+/* Optional: Pulse Animation */
+.bark-link:focus,
+.bark-link:active {
+    animation: pulse 1s infinite; /* Add a subtle pulsing effect */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-cards, .gallery-images {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Footer Section Styling */
+footer {
+    background-color: #03045e; /* Match the header and button color */
+    color: white; /* White text for contrast */
+    padding: 20px 0; /* Add vertical spacing */
+    text-align: center; /* Center-align the footer content */
+}
+
+/* Footer Links */
+footer a {
+    color: #00b4d8; /* Light blue links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold links for emphasis */
+}
+
+footer a:hover {
+    color: #90e0ef; /* Lighter blue on hover */
+}
+
+/* Footer Text */
+footer p {
+    font-size: 1em; /* Standard text size */
+    margin: 10px 0; /* Spacing around paragraphs */
+    line-height: 1.5; /* Adjust line height for readability */
+}
+
+/* Footer Icons (Optional for Social Media) */
+footer .social-media {
+    margin-top: 10px; /* Spacing above social icons */
+}
+
+footer .social-media a {
+    margin: 0 10px; /* Horizontal spacing between icons */
+    font-size: 1.5em; /* Increase icon size */
+    color: #00b4d8; /* Light blue icon color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+footer .social-media a:hover {
+    color: #90e0ef; /* Lighter blue on hover */
+}
