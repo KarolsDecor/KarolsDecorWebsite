@@ -15,35 +15,69 @@
      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Favicon -->
-    <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+    <link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
 
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Karol's Decor Home Staging | Professional Staging Services">
-    <meta property="og:description" content="Transform your home with Karol's Decor! Specializing in home staging services in Mississauga, Milton, and Oakville.">
-    <meta property="og:image" content="images/logo.jpg">
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Karol's Decor - Home Staging | Transform Your Property">
+    <meta name="description" content="Transform your property into a buyer's dream with professional home staging services by Karol's Decor. Serving Mississauga, Milton, Oakville, and surrounding areas.">
+    <meta name="keywords" content="home staging, Karol's Decor, professional home staging, home staging Mississauga, home staging Milton, home staging Oakville, property transformation, real estate staging">
+    <meta name="author" content="Karol's Decor">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Karol's Decor - Home Staging | Transform Your Property">
+    <meta property="og:description" content="Transform your property into a buyer's dream with professional home staging services by Karol's Decor. Serving Mississauga, Milton, Oakville, and surrounding areas.">
+    <meta property="og:image" content="images/Karols-Decor-logo-2.jpg">
+    <meta property="og:image:alt" content="Karol's Decor Logo">
     <meta property="og:url" content="https://karolsdecor.ca">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Karol's Decor Home Staging">
-    <meta name="twitter:description" content="Transform your home with Karol's Decor! Specializing in home staging services in Mississauga, Milton, and Oakville.">
-    <meta name="twitter:image" content="images/facebook-profile-picture-2.jpg">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Karol's Decor Home Staging",
+          "description": "Transform your property into a buyer's dream with professional home staging services by Karol's Decor.",
+          "url": "https://karolsdecor.ca",
+          "logo": "https://karolsdecor.ca/images/Karols-Decor-logo-2.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2480 Argentia Rd",
+            "addressLocality": "Mississauga",
+            "addressRegion": "ON",
+            "postalCode": "L5N 5Z7",
+            "addressCountry": "Canada"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+16478294124",
+            "contactType": "Customer Service"
+          },
+          "image": [
+            "https://karolsdecor.ca/images/gallery/image1.jpg",
+            "https://karolsdecor.ca/images/gallery/image2.jpg"
+          ]
+        }
+        </script>
 
-    <!-- Additional Meta for LinkedIn -->
-    <meta property="og:image" content="images/linkedin-profile-picture-2.jpg">
-    <meta property="og:image:alt" content="Karol's Decor - Transform your home with professional staging services.">
- 
 </head>
 <body>
 
     <!-- Header -->
     <header>
         <nav>
+            <!-- Logo -->
             <a href="#home" class="logo">
                 <img src="images/logos/KarolsLogoWhite.png" alt="Karol's Decor Logo">
             </a>
-            <div class="menu-icon" id="menu-icon">&#9776;</div>
+    
+            <!-- Menu Icon -->
+            <div class="menu-icon">&#9776;</div>
+    
+            <!-- Navigation Links -->
             <div class="nav-links" id="nav-links">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -56,7 +90,7 @@
             </div>
         </nav>
     </header>
-
+    
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
@@ -344,6 +378,14 @@
     slidesPerView: 3,
     spaceBetween: 10, // Adjust spacing
 });
+</script>
+
+<script>
+    document.querySelector('.menu-icon').addEventListener('click', function () {
+    const menu = document.querySelector('header ul');
+    menu.classList.toggle('active');
+});
+
 </script>
 
 </body>
