@@ -3,25 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Karol's Decor - Professional home staging services to elevate your space. View our portfolio and learn more about our services.">
-    <title>Karol's Decor Home Staging</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Transform your property into a buyer's dream with professional home staging by Karol's Decor in Mississauga and surrounding areas.">
+    <title>Karol's Decor | Professional Home Staging</title>
+    <link rel="stylesheet" href="css/style.css?v=3">
     <link rel="icon" href="images/logos/KarolsIcon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Swiper's CSS -->
      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
 
     <!-- Essential Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="Karol's Decor - Home Staging | Transform Your Property">
-    <meta name="description" content="Transform your property into a buyer's dream with professional home staging services by Karol's Decor. Serving Mississauga, Milton, Oakville, and surrounding areas.">
     <meta name="keywords" content="home staging, Karol's Decor, professional home staging, home staging Mississauga, home staging Milton, home staging Oakville, property transformation, real estate staging">
     <meta name="author" content="Karol's Decor">
     <meta name="robots" content="index, follow">
@@ -29,7 +25,7 @@
     <!-- Open Graph Tags for Social Sharing -->
     <meta property="og:title" content="Karol's Decor - Home Staging | Transform Your Property">
     <meta property="og:description" content="Transform your property into a buyer's dream with professional home staging services by Karol's Decor. Serving Mississauga, Milton, Oakville, and surrounding areas.">
-    <meta property="og:image" content="images/Karols-Decor-logo-2.jpg">
+    <meta property="og:image" content="https://karolsdecor.ca/images/Karols-Decor-logo-2.jpg">
     <meta property="og:image:alt" content="Karol's Decor Logo">
     <meta property="og:url" content="https://karolsdecor.ca">
     <meta property="og:type" content="website">
@@ -57,8 +53,8 @@
             "contactType": "Customer Service"
           },
           "image": [
-            "https://karolsdecor.ca/images/gallery/image1.jpg",
-            "https://karolsdecor.ca/images/gallery/image2.jpg"
+            "https://karolsdecor.ca/images/gallery/Image1.jpg",
+            "https://karolsdecor.ca/images/gallery/Image2.jpg"
           ]
         }
         </script>
@@ -75,7 +71,7 @@
             </a>
     
             <!-- Menu Icon -->
-            <div class="menu-icon">&#9776;</div>
+            <button class="menu-icon" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation menu">&#9776;</button>
     
             <!-- Navigation Links -->
             <div class="nav-links" id="nav-links">
@@ -97,7 +93,7 @@
             <h1>Transforming Spaces, Elevating Style</h1>
             <p>Professional home staging services to make your home stand out in the market.</p>
             <div class="bark-profile">
-                <a href="https://www.bark.com/en/ca/company/karols-decor-home-staging/MVBY9/" target="_blank" class="bark-link">
+                <a href="https://www.bark.com/en/ca/company/karols-decor-home-staging/MVBY9/" target="_blank" rel="noopener noreferrer" class="bark-link">
                     <img src="images/barklogo-dark.png" alt="Bark Logo" class="bark-logo"> Check Out My Bark Profile
                 </a>
             </div>
@@ -348,45 +344,16 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Karol's Decor Home Staging. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2026</span> Karol's Decor Home Staging. All rights reserved.</p>
         <p>Mississauga, ON | <a href="mailto:karolsdecor@gmail.com">karolsdecor@gmail.com</a></p>
-        <div class="social-media">
-            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
     </footer>
     
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=3"></script>
 
 
   <!-- Swiper's JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Swiper Initialization -->
-<script>
-    var swiper = new Swiper('.gallery-swiper', { // Target only gallery swiper
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    slidesPerView: 3,
-    spaceBetween: 10, // Adjust spacing
-});
-</script>
-
-<script>
-    document.querySelector('.menu-icon').addEventListener('click', function () {
-    const menu = document.querySelector('header ul');
-    menu.classList.toggle('active');
-});
-
-</script>
 
 </body>
 </html>

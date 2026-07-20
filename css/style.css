@@ -82,13 +82,32 @@ header ul li a:hover {
     font-size: 1.8rem;
     cursor: pointer;
     color: #ffffff;
+    background: transparent;
+    border: 0;
+    line-height: 1;
+    padding: 0.5rem;
 }
 
 /* Responsive Header */
 @media (max-width: 768px) {
+    header {
+        padding: 0.75rem 1rem;
+    }
+
+    header .logo {
+        min-width: 0;
+    }
+
+    header .logo img {
+        width: min(230px, 72vw);
+        max-height: 76px;
+        object-fit: contain;
+    }
+
     .menu-icon {
         display: block; /* Show menu icon on small screens */
         font-size: 2rem;
+        flex: 0 0 auto;
     }
 
     header ul {
@@ -98,7 +117,7 @@ header ul li a:hover {
         background-color: rgba(0, 0, 0, 0.9); /* Add a background for better visibility */
         padding: 10px;
         position: absolute;
-        top: 95px;
+        top: 100%;
         left: 0;
         width: 100%; 
         z-index: 1;
@@ -161,16 +180,28 @@ header ul li a:hover {
 /* Responsive Hero Section for Smaller Screens */
 @media (max-width: 768px) {
     .hero {
-        height: auto; /* Allow dynamic height on small screens */
-        padding-top: 150px; /* Add padding for smaller screens */
+        min-height: 100svh;
+        height: auto;
+        justify-content: center;
+        padding: 130px 16px 60px;
     }
 
     .hero-content h1 {
-        font-size: clamp(1.8rem, 4vw, 2.5rem); /* Adjust heading size for mobile */
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+        line-height: 1.2;
+        overflow-wrap: anywhere;
     }
 
     .hero-content p {
-        font-size: clamp(0.9rem, 2.5vw, 1.2rem); /* Adjust paragraph size */
+        font-size: clamp(0.95rem, 4vw, 1.2rem);
+        line-height: 1.5;
+    }
+
+    .bark-link {
+        max-width: 100%;
+        padding: 12px 18px;
+        font-size: 1rem;
+        text-align: left;
     }
 }
 
@@ -474,12 +505,133 @@ header ul li a:hover {
 /* Ensure the gallery images scale on smaller screens */
 @media (max-width: 768px) {
     .swiper-slide img {
-        max-width: 150px; /* Further reduce size for smaller devices */
-        height: auto; /* Maintain aspect ratio */
-        margin: 0 auto; /* Center images */
+        width: 100%;
+        max-width: 100%;
+        height: min(66vh, 520px);
+        object-fit: cover;
+        margin: 0 auto;
     }
     .gallery-swiper {
         padding: 10px 0; /* Adjust vertical spacing for smaller devices */
+    }
+}
+
+/* Full-screen gallery viewer */
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: grid;
+    grid-template-columns: minmax(44px, 1fr) minmax(0, 1100px) minmax(44px, 1fr);
+    align-items: center;
+    gap: 8px;
+    padding: 24px 12px;
+    background: rgba(0, 0, 0, 0.94);
+    color: #fff;
+    touch-action: pan-y;
+}
+
+.lightbox-open {
+    overflow: hidden;
+}
+
+.lightbox-figure {
+    grid-column: 2;
+    margin: 0;
+    min-width: 0;
+    text-align: center;
+}
+
+.lightbox-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: calc(100vh - 90px);
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lightbox-caption {
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+.lightbox button {
+    border: 0;
+    color: #fff;
+    background: rgba(3, 4, 94, 0.72);
+    cursor: pointer;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: max(10px, env(safe-area-inset-top));
+    right: max(10px, env(safe-area-inset-right));
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+.lightbox-previous,
+.lightbox-next {
+    width: 44px;
+    height: 64px;
+    border-radius: 8px;
+    font-size: 1.75rem;
+}
+
+.lightbox-previous {
+    grid-column: 1;
+}
+
+.lightbox-next {
+    grid-column: 3;
+}
+
+.lightbox button:hover,
+.lightbox button:focus-visible {
+    background: #0077b6;
+    outline: 3px solid #90e0ef;
+    outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+    .lightbox {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(0, 1fr) auto;
+        padding: 64px 10px max(12px, env(safe-area-inset-bottom));
+    }
+
+    .lightbox-figure {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .lightbox-image {
+        max-height: calc(100svh - 150px);
+    }
+
+    .lightbox-previous,
+    .lightbox-next {
+        grid-row: 2;
+        width: 100%;
+        height: 48px;
+    }
+
+    .lightbox-previous {
+        grid-column: 1;
+    }
+
+    .lightbox-next {
+        grid-column: 2;
     }
 }
 
