@@ -26,7 +26,7 @@ footer{background:#02033f;color:#dce7f4;padding-top:55px}.footer-grid{padding:0 
 /* Keep Karol present and personal without letting the portrait overpower her work. */
 .about-container{grid-template-columns:330px minmax(0,1fr);gap:82px}
 .about-image{width:290px;justify-self:center}
-.about-image>img{width:290px;height:290px;aspect-ratio:1/1;object-fit:cover;object-position:center 24%;border-radius:50%}
+.about-image>img{width:290px;height:290px;aspect-ratio:1/1;object-fit:cover;object-position:center;border-radius:50%}
 .image-badge{right:-34px;bottom:-16px;max-width:165px;padding:13px 15px;font-size:.78rem}
 @media(max-width:900px){.about-container{grid-template-columns:1fr;gap:42px}.about-image{width:220px}.about-image>img{width:220px;height:220px}.image-badge{right:-42px;bottom:-10px}}
 @media(max-width:650px){.about-image{width:160px}.about-image>img{width:160px;height:160px}.image-badge{position:absolute;right:-68px;bottom:-14px;width:150px;margin:0;font-size:.7rem}}
